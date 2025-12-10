@@ -1,0 +1,36 @@
+{
+  "name": "Умный урок",
+  "short_name": "Умный урок",
+  "description": "Образовательное приложение для начальной школы",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9fb",
+  "theme_color": "#5b8dff",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-192.jpg",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "kids"],
+  "lang": "ru",
+  "dir": "ltr",
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
