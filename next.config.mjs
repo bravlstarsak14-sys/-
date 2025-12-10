@@ -20,10 +20,12 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+
+  // 👇 ЭТО ВАЖНО: чтобы отключить Turbopack и включить Webpack
+  webpack: (config) => config,
+
+  // 👇 ЭТО НОВОЕ ТРЕБОВАНИЕ NEXT 16
+  turbopack: {},
 }
 
-export default {
-  webpack: (config) => {
-    return config
-  },
-}
+export default withPWA(nextConfig)
