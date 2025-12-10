@@ -22,4 +22,8 @@ const nextConfig = {
   },
 }
 
-export default withPWA(nextConfig)
+export default {
+  webpack: (config) => {
+    return config
+  },
+}
