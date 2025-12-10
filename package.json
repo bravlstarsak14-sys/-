@@ -1,12 +1,13 @@
 {
-  "name": "smart-lesson-pwa",
-  "version": "1.0.0",
+  "name": "my-project",
+  "version": "0.1.0",
   "private": true,
- "scripts": {
-  "build": "next build --webpack",
+  "scripts": {
+    "build": "your-build-command"
   "dev": "next dev --webpack",
   "lint": "eslint .",
-  "start": "next start"
+  "start": "next start"},
+  "dependencies": {}
 }
   "dependencies": {
     "@ducanh2912/next-pwa": "latest",
