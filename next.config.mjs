@@ -1,5 +1,21 @@
 import withPWAInit from '@ducanh2912/next-pwa'
 
+/** @type {import('next').NextConfig} */
+const baseConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    unoptimized: true,
+  },
+
+  // отключаем Turbopack
+  webpack: (config) => config,
+
+  // важно: пустой объект, чтобы Next не ругался
+  turbopack: {},
+}
+
 const withPWA = withPWAInit({
   dest: 'public',
   cacheOnFrontEndNav: true,
@@ -12,20 +28,4 @@ const withPWA = withPWAInit({
   },
 })
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
-
-  // 👇 ЭТО ВАЖНО: чтобы отключить Turbopack и включить Webpack
-  webpack: (config) => config,
-
-  // 👇 ЭТО НОВОЕ ТРЕБОВАНИЕ NEXT 16
-  turbopack: {},
-}
-
-export default withPWA(nextConfig)
+export default withPWA(baseConfig)
